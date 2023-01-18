@@ -10,16 +10,16 @@ import EventManagement from "./screens/List/EventManagement";
 import QuestionManagement from "./screens/List/QuestionManagement";
 import AdminManagement from "./screens/List/AdminManagement";
 
-function App({ onPress }) {
+function App(props) {
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => {
-    setIsOpen(true);
-  };
+  // const toggle = () => {
+  //   setIsOpen(true);
+  // };
 
   return (
     <div className="App" style={{ alignItems: "center" }}>
       <div style={{ width: isOpen ? "300px" : "50px" }} className="container">
-        <SidebarPage onPress={toggle} />
+        <SidebarPage toggle={props.toggle} />
 
         <main className="content">
           <Topbar />
